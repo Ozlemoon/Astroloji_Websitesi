@@ -1,0 +1,937 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+    <title>ASTROLOJİ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins" />
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: "Poppins", sans-serif
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+        .w3-half img {
+            margin-bottom: -6px;
+            margin-top: 16px;
+            opacity: 0.8;
+            cursor: pointer
+        }
+
+            .w3-half img:hover {
+                opacity: 1
+            }
+    </style>
+    <style>
+        .ornek {
+            width: 1000px;
+            margin: auto;
+        }
+
+        .saga-kaydir {
+            float: right;
+            padding: 0 0 10px 10px;
+        }
+    </style>
+    <style>
+        .ornek2 {
+            width: 1100px;
+            margin: auto;
+        }
+
+        .sola-kaydir {
+            float: left;
+            padding: 0 10px 10px 0;
+        }
+    </style>
+    <style>
+        body {
+            background-color: rgb(247, 247, 238);
+        }
+    </style>
+
+    <script src="burcuyumu.js"></script>
+    <script src="burchesaplama.js"></script>
+    <script src="yukselenhesaplama.js"></script>
+</head>
+
+<body>
+
+    <div class="baslik"></div>
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-teal w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;"
+         id="mySidebar">
+        <br />
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
+           style="width:100%;font-size:22px">İÇERİK MENÜSÜ</a>
+        <div class="w3-container">
+
+            <h3 class="w3-padding-64"><b>Astroloji<br />&</br>Horoskop</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Anasayfa</a>
+            <a href="#BurçHesaplama" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Burç Hesaplama</a>
+            <a href="#YükselenHesaplama" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">
+                Yükselen
+                Hesaplama
+            </a>
+            <a href="#BurçveYükselenYorumları" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">
+                Burç ve
+                Yükselen Yorumları
+            </a>
+            <a href="#BurçUyumları" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Burç Uyumları</a>
+            <a href="#Tasarımcılar" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Tasarımcılar</a>
+            <a href="#İletişim" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">İletişim</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-black w3-margin-right" onclick="w3_open()">☰</a>
+        <span>GÖKYÜZÜ DİLİ: ASTROLOJİ</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+         id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="">
+            <h2 class="w3-jumbo">
+                <b>
+                    <center>HOROSKOP VE ASTROLOJİ</center>
+                </b>
+            </h2>
+            <h2 class="w3-xxxlarge w3-text-teal">
+                <b>
+                    <center>Astroloji Dünyasına Hoş Geldiniz!</center>
+                </b>
+            </h2>
+            <hr style="width:50px;border:5px solid black" class="w3-round" />
+
+            <div class="ornek">
+                <img src="resim-video/lila astroloji nedir.jpg" style="border-radius: 160px;" width="250px" height="250px"
+                     class="saga-kaydir" />
+            </div>
+            <span>
+                <h3><strong>ASTROLOJİ NEDİR?</strong></h3>
+            </span>
+            <span>
+                Astroloji, yıldızların hesabı manasına gelen “Astrologia” kelimesinden türemiştir.
+                Türk Dil Kurumu’na göre “Yıldız falcılığı” olarak yorumlanmaktadır.
+                Oxford Dictionary ise biraz daha genel bir tanım kullanarak; "Göksel cisimlerin hareketi ile göreceli
+                pozisyonları ve bunların insan hayatı üzerindeki varsayılan etkilerin incelemesidir" diye yazmıştır.
+                Astrolog Robert Currey’e göre; “Astroloji, gök cisimlerinin konumları ve hareketleri ile dünyadaki fiziksel
+                süreçler ve yaşam arasındaki korelasyonun çalışması ve bunun sonucunda ortaya çıkan uygulamalardır.
+                Bazı astrologlar yıldızlar ve takımyıldızlarıyla çalışsalar da, batılı astrologlar Güneş Sistemi içinde Güneş,
+                Ay ve gezegenler (Plüton dahil) ile çalışırlar.
+            </span>
+            <br /> <span>
+                <h3><strong> HOROSKOP NEDİR? </strong></h3>
+            </span>
+
+            <div class="ornek2">
+                <img src="resim-video/astrolojinedir3mavikoyu.jpg" style="border-radius: 160px;" width="250px" height="250px"
+                     class="sola-kaydir" />
+            </div>
+
+            <span>
+                Astrolojide, her insanın doğduğu anda gökyüzünde yer alan gök cisimlerinin konumlarının, birbirleriyle
+                yaptıkları açıların ve evlerin yer aldığı haritaya doğum haritası diğer bir adıyla horoskop adı verilir.
+                Tüm bu bilgilere göre kişilerin karakterlerini, huylarını ya da düşüncelerini yorumlamak mümkündür. <br />
+                Horoskop hesaplamak için bazı kişisel bilgilere ihtiyaç duyulmaktadır.Doğduğunuz anda hangi gezegenin ve Zodyak
+                burcunun hangi astroloji evinde konumlandığını belirleyerek benliğinize dair daha derin bir içgörü elde
+                edebilirsiniz.
+                Doğum tarihine, doğum saatine, doğulan yere göre horoskop hesaplanması mümkündür. <br />
+                Burç yorumlarına benzer bir şekilde de yorumlanan horoskop tamamen kişilere özeldir ve bu nedenle de birçok kişi
+                tarafından merak edilir.
+            </span>
+            <br /><br />
+            <span>
+                <h3><strong>DÖRT ELEMENT NEDİR?</strong></h3>
+            </span>
+            <div class="ornek">
+                <img src="resim-video/elementler.jpg" style="border-radius: 160px;" width="250px" height="250px"
+                     class="saga-kaydir" />
+            </div>
+            <span>
+                Doğada bulunan ve doğayı şekillendiren temel 4 element olduğu gibi, astrolojide de burçlar 4 element grubuna
+                ayrılırlar. Bunlar Ateş, Toprak, Hava ve Sudur. Burçların karakteristik yapıları bu dört elemente göre
+                şekillenir. <br />
+                Doğduğumuz an bu dünyada aldığımız ilk nefes ile, o an ki gök durumu astroloji haritamız olarak belirlenir.
+                Doğada bulunan bu 4 temel elementin gücü ruhen onları nasıl kullandığımız haritaya bakılarak anlaşılabilir.
+                Aslında amaç kendini tanımak ve nihayetinde bu 4 elementin gücünü eşit ve dengeli kullanmaktır.
+                <br /> Doğum anımızda tüm gezegenler için gezegenlerin o an ki konumuna göre burcumuz vardır ve her burcun ait
+                olduğu element vardır. Yoğunluk olarak hangi element varsa kişiliğimizi o elemenetin özellikleri belirler.
+                <br /> İnsanlar arasında uyumsal olarak da elementler en çok dikkate alınan unsurdur.
+            </span>
+        </div>
+
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image" />
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="w3-container" id="BurçHesaplama" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-teal"><b> BURÇ HESAPLAMA</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round" />
+            <span>
+                <h3><strong>BURÇ NEDİR?</strong></h3>
+            </span>
+            <span>
+                Kişilerin doğum anlarında gökyüzü incelendiğinde Güneş'in hangi konumda olduğuna göre şekillenen gökyüzüyle
+                sembolize edilen simgesel ifadelerdir. 12 adet burç bulunur ve 12 ayın belirli günlerine göre dereceleriyle
+                hesaplanarak oluşturulmuştur.
+                12 adet burç sırasıyla; koç, boğa, ikizler, yengeç, aslan, başak, terazi, akrep, yay, oğlak, kova ve balıktır.
+            </span>
+            <span>
+                Burçlar sayesinde karşımızdaki kişinin karakteri hakkında tam olmasa da fikir sahibi olma şansımız bulunur.<br />
+                Ancak burçlar genel olarak her daim doğru kişilik analizi vermeyebilir. 12 burç olmasına rağmen insanlar arasında
+                12 farklı kişilik bulunur diyemeyiz.
+                <br />
+                Bunun dışında burçlar gezegenlerin hareketlerine göre doğum haritalarındaki konumlara göre o gün içerisinde
+                mutlu, huzursuz, şanslı, şanssız gibi hissedebilirler. Eğer karamsarlık halindeyseniz burç yorumlarınıza
+                bakabilirsiniz!
+            </span>
+            <br /><br />
+            <img src="resim-video/koc.jpg" style="width: 85px;" onclick="onClick(this)" alt="Koç" />
+            <img src="resim-video/kova.jpg" style="width: 85px;" onclick="onClick(this)" alt="Kova" />
+            <img src="resim-video/oglak.jpg" style="width: 85px;" onclick="onClick(this)" alt="Oğlak" />
+            <img src="resim-video/balık.jpg" style="width: 85px;" onclick="onClick(this)" alt="Balık" />
+            <img src="resim-video/ikizler.jpg" style="width: 85px;" onclick="onClick(this)" alt="İkizler" />
+            <img src="resim-video/yengec.jpg" style="width: 85px;" onclick="onClick(this)" alt="Yengeç" />
+            <img src="resim-video/aslan.jpg" style="width: 85px;" onclick="onClick(this)" alt="Aslan" />
+            <img src="resim-video/basak.jpg" style="width: 85px;" onclick="onClick(this)" alt="Başak" />
+            <img src="resim-video/terazi.jpg" style="width: 85px;" onclick="onClick(this)" alt="Terazi" />
+            <img src="resim-video/akrep.jpg" style="width: 85px;" onclick="onClick(this)" alt="Akrep" />
+            <img src="resim-video/boga.jpg" style="width: 85px;" onclick="onClick(this)" alt="Boğa" />
+            <img src="resim-video/yay.jpg" style="width: 85px;" onclick="onClick(this)" alt="Yay" />
+
+            <br /><br />
+            <h4><strong>Lütfen bilgilerinizi istenen şekilde giriniz!</strong></h4>
+            <hr />
+            <p>Doğum Tarihinizi Girin :  <input type="date" id="dob" /></p>
+            <br /><hr />
+            <p> Cinsiyetinizi Seçin  </p>
+            <input type="radio" id="male" name="gender" value="erkek" />
+            <label for="male">Erkek</label><br />
+            <input type="radio" id="female" name="gender" value="kadın" />
+            <label for="female">Kadın</label><br /> <br />
+            <button onclick="hesapla()">HESAPLA</button>
+            <br /><br />
+            <div id="burc-yorumu"></div>
+
+
+
+            <div class="w3-container" id="YükselenHesaplama" style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-teal"><b> YÜKSELEN HESAPLAMA</b></h1>
+                <hr style="width:50px;border:5px solid black" class="w3-round" />
+                <span>
+                    <h3><strong>YÜKSELEN NEDİR?</strong></h3>
+                </span>
+
+                <span>
+                    Yükselen Burç, doğum anında, Doğu ufkunda yükselmekte olan burca denir. Diğer bir ifadeyle doğduğunuz anda
+                    ufukta hangi burç bulunuyorsa, o sizin yükselen burcunuzdur. Yükselen burcumuzu tespit etmek için mutlaka
+                    doğum saatimiz gerekmektedir.
+                    <br />
+                    Örneğin eğer biz güneş doğarken doğduysak, doğu ufkunda yükselen burç bizim kendi burcumuz olur. Sonra
+                    saatler ilerledikçe sırasıyla tüm burçlar yükselir. Her dört dakikada bir, 1 derece ilerler.
+                </span>
+                <span>Yükselen burç her zaman 1. evdir. Ondan sonra gelen burçlar sırasıyla diğer evlere yerleşir.</span><br />
+                Bu sebeple yükselen burcumuz, aynı zamanda dış görünüşümüzü, fiziki özelliklerimizi, hal ve tavırlarımızı da
+                etkiler.
+            </div>
+            <img src="resim-video/koc.jpg" style="width: 85px;" onclick="onClick(this)" alt="Koç" />
+            <img src="resim-video/kova.jpg" style="width: 85px;" onclick="onClick(this)" alt="Kova" />
+            <img src="resim-video/oglak.jpg" style="width: 85px;" onclick="onClick(this)" alt="Oğlak" />
+            <img src="resim-video/balık.jpg" style="width: 85px;" onclick="onClick(this)" alt="Balık" />
+            <img src="resim-video/ikizler.jpg" style="width: 85px;" onclick="onClick(this)" alt="İkizler" />
+            <img src="resim-video/yengec.jpg" style="width: 85px;" onclick="onClick(this)" alt="Yengeç" />
+            <img src="resim-video/aslan.jpg" style="width: 85px;" onclick="onClick(this)" alt="Aslan" />
+            <img src="resim-video/basak.jpg" style="width: 85px;" onclick="onClick(this)" alt="Başak" />
+            <img src="resim-video/terazi.jpg" style="width: 85px;" onclick="onClick(this)" alt="Terazi" />
+            <img src="resim-video/akrep.jpg" style="width: 85px;" onclick="onClick(this)" alt="Akrep" />
+            <img src="resim-video/boga.jpg" style="width: 85px;" onclick="onClick(this)" alt="Boğa" />
+            <img src="resim-video/yay.jpg" style="width: 85px;" onclick="onClick(this)" alt="Yay" />
+
+            <br /><br />
+            <h4><strong>Lütfen bilgilerinizi istenen şekilde giriniz!</strong></h4>
+            <hr />
+
+            <p>Doğum Tarihinizi Girin: <input type="date" id="date" /></p>
+            <br /><hr />
+            <p>Doğum Saatinizi Girin: <input type="time" id="dt" /></p>
+            <br />
+            <button onclick="hesapla2()">Hesapla</button> <br /> <br />
+            <p id="yukselen-sonuc"></p>
+
+
+            <div class="w3-container" id="BurçveYükselenYorumları" style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-teal"><b> BURÇ VE YÜKSELEN YORUMLARI</b></h1>
+                <hr style="width:50px;border:5px solid black" class="w3-round" />
+                <form action="">
+                    <p>
+                        <h3 class="w3-text-teal"><strong>ERKEKLER İÇİN YORUMLAR</strong></h3>
+                    </p>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Koç Burcu Erkeği</b></summary>
+                            <span>
+                                -Koç burcu ateş elementinin grubuna aittir.
+                                <br /> -Hareketli ve enerjik yapılarıyla dikkat çekerler.
+                                <br /> -Bu burçta doğan erkeklerin en büyük özelliği, ben merkezci olmalarıdır.
+                                <br /> -Pratik kişilerdir.
+                                <br /> -Koç burcu erkeklerinin kendilerine olan güveni oldukça yüksektir.
+                                <br /> -Sosyallerdir, genelde spora düşkün olurlar.
+                                <br /> -Azimli ve çalışkandır.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Kova Burcu Erkeği</b></summary>
+
+                            <span>
+                                -Kova burcu hava elementinin grubuna aittir.
+                                <br />-Görüşlerinde olmayan insanlarla tartışmayı çok sever. Diğer insanların düşüncelerini,
+                                görüşlerini ve inançlarını öğrenmekten hoşlanırlar.
+                                <br />-Aşık oluşunu göstermeyi tam olarak bilmez.
+                                <br />-Özgür ruhlu ve asildirler, bu nedenle kurallara veya otoriteye dayanamazlar.
+                                <br />-Kova burcu erkeği, kendi yaşam tarzlarından farklı olan yaşam tarzlarını yargılamaz.
+                                <br />-Kibirli oldukları söylenebilir.
+                                <br />-Kova erkeği kıskanç değildir. Kıskanırsa bile bunu fark etmek mümkün değildir.
+
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Oğlak Burcu Erkeği</b></summary>
+
+                            <span>
+                                -Oğlak burcu toprak elementinin grubuna aittir.
+                                <br />-Sert görünen bu burcun erkekleri aslında çekingen ve duygusaldır.
+                                <br />-Oğlak burcu erkekleri genellikle hırslı bir yapıya sahip olurlar.
+                                <br />-Oğlak burcu erkeği günü birlik ilişkilerden hoşlanmazlar.
+                                <br />-Kimse onlara istemedikleri bir şeyi yaptıramaz. Aynı zamanda dik başlıdırlar.
+                                <br />-Oğlak burcu erkeği gösterişten uzak ve sadeliklerden hoşlanırlar.
+                                <br />-Oğlak burcu erkeği aileleri ile birlikte zaman geçirmekten hoşlanırlar.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Balık Burcu Erkeği</b> </summary>
+
+                            <span>
+                                -Balık burcu su elementinin grubuna aittir.
+                                <br />-Balık burcu erkekleri inanılmaz romantik ve sevgi doludurlar.
+                                <br />-Aynı zamanda bu burç sahiplerinin erkekleri karşısındaki kişiyi çok sever.
+                                <br />-Oldukça duygusal olan balık burcu erkeği macerayı sever.
+                                <br />-Aynı zamanda balık burcu erkeklerinin sezgileri de oldukça kuvvetlidir.
+                                <br />-Balık burcu erkeği çalışmayı çok severler.
+                                <br />-Aynı zamanda balık burcu erkeği oldukça hayalperest olmasıyla da ön plana çıkıyor.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>İkizler Burcu Erkeği</b></summary>
+
+                            <span>
+                                -İkizler burcu hava elementinin grubuna aittir.
+                                <br />-İkizler burcu erkeği, hareketli ve değişken bir yapısı ile dikkatleri üzerine çekmeyi
+                                başaran aynı zamanda entelektüel bir erkektir.
+                                <br />-Kültürel bilgileri ile çevrelerindeki insanları kısa sürede etkiler.
+                                <br />-Sonsuz araştırma ve öğrenme istekleri zekalarını ve enerjilerini her daim canlı tutar.
+                                <br />-Çevrelerine karşı oldukça duyarlı ve yardımsever insanlardır.
+                                <br />-Genellikle eğlenceli ve sempatiktirler.
+                                <br />-Doğru yatırımlar yapmak ve tasarruf ikizler burcu erkeği için önemlidir. Başkalarının
+                                paralarına ise aynı özeni göstermemeleri ve kolayca harcayabilmeleri ise olumsuz yanlarıdır.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Yengeç Burcu Erkeği</b></summary>
+
+                            <span>
+                                -Yengeç burcu erkeği su elementinin grubuna aittir.
+                                <br /> -Hisler konusunda çok hassas olan yengeç burcu erkekleri; sevecen, nazik, anlayışlı,
+                                ileri görüşlü ve yumuşak kalplidir.
+                                <br /> -Yengeç burcu erkeği, güvenilir bir yapıya sahiptir.
+                                <br /> -Bununla beraber yengeç burcu erkekleri genellikle empati kurabilen, karşısındakinin ne
+                                hissettiğini düşünebilen bir karaktere sahiptir.
+                                <br /> -Yengeç burcu erkeği tüm burç erkekleri arasında en romantik kişiliklerdir.
+                                <br /> -Yengeç burcu erkeği yardımsever ve sabırlılardır.
+                                <br /> -Yengeç burcu erkeğinin olumsuz özellikleri; rekabetçi olmaları, aşırı duyarlı
+                                olmaları, dedikodu yapmaları, ketum olmaları ve kibirli olmaları şeklinde sıralanabilir.
+
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Aslan Burcu Erkeği</b></summary>
+
+                            <span>
+                                -Aslan burcu erkeği ateş elementinin grubuna aittir.
+                                <br />-Aslan burcu erkeği, kendine güvenen tarzıyla bilinir.
+                                <br />-Eğlenceli davranışlarının yanı sıra arkadaş ortamında sevilen bir karaktere sahiptir.
+                                <br />-Başladığı bir iş konusunda son derece sebatkardır. Hiç ara vermeden uzun süre çalışabilir hatta günlerce çevresindeki her şeyi unutur. Konu bittiği zaman da hiç kimse onu yerinden kımıldatamaz.
+                                <br />-Aslan burcu kişisi partnerinden sürekli olumlu sözler duymaktan hoşlandıkları için, en küçük bir ilgisizlik karşısında tüm dengelerini yitirirler. Yaşamın karizmatik oyuncularıdır.
+                                <br />-Maddiyat konusunda çok cömerttirler. Bu yüzden de yatırım yapmazlar.
+                                <br />-Aslan burcu erkekleri egolu bir tavra sahiptir.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Başak Burcu Erkeği </b> </summary>
+                            <span>
+                                -Başak burcu toprak elementinin grubuna aittir.
+                                <br />-Bu burcun erkekleri ile yaşamak zordur çünkü oldukça titiz ve düzenlilerdir, disiplin duyguları da iyice gelişmiştir.
+                                <br />-Başak burcu erkekleri sürpriz durumlardan hoşlanmazlar. Çok düşünür, geleceğin planını net kurarlar.
+                                <br />-Amaçsız ve beklentisiz kişiler için, zaman harcamaktan hoşlanmazlar.
+                                <br />-Başak burcu erkeği planlı çalışmaları ile iş ve akademik yaşamında başarılı olmak için mücadele eder. Burçlar arasında akademik ve iş yaşamı konusunda en iyi olan burç denilebilir.
+                                <br />-Başak burcu erkekleri temkinlidirler ve hata yapmaktan çekinirler. Bu yüzden cesaret gerektiren işleri risk almadıkları için kaybedebilirler.
+                                <br />-İyi bir aile reisi oldukları söylense de, bunu geciktirmek için her türlü yolu denerler ve müzmin bir bekar olmaktan kurtulamazlar. Aşk ilişkileri zordur. Sürekli denetleme duyguları yüzünden partnerleriyle aralarında sürekli sorun çıkar. Baba oldukları zaman da bu duyguyu geç tatmanın keyifsizliğini duyarlar.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Terazi Burcu Erkeği </b></summary>
+
+                            <span>
+                                -Terazi burcu erkeği hava burçları arasında yer alır.
+                                <br />-Eğlenmeyi ve gezmeyi seven terazi burcu erkeği donuk ve ya zorba insanlardan
+                                nefret eder.
+                                <br />-Çekici ve neşeli kişiliği ile ön plana çıkan terazi burcu erkeği karşısındaki
+                                insanı hızla etkiler.
+                                <br />-Terazi burcu erkeği oldukça mantıklı kararlar vermeleri ile bilinir.
+                                <br />-Venüs’ün etkisinde olan bu erkekle, aşkınızın sonsuza kadar süreceğine inanacak kadar saf olmayın. O, sizi üzmeden ve kırmadan kaçmaya çalışabilir. Çünkü, ilişki kan kaybetmeden uzaklaşmak ve aşkını hep en güzel anılarıyla hatırlamak isterler.
+                                <br />-Aynı zamanda diplomatik yapıları olan terazi burcu erkekleri oldukça zarif
+                                davranıyorlar. Sanat ve entellektüellik taşıyan konular ilgisini çeker. Nezih ortamlara bayılırlar.
+                                <br />-Kolay etkilenebilen terazi burcu erkekleri kincidir.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Akrep Burcu Erkeği </b></summary>
+
+                            <span>
+                                -Akrep burcu erkeği, su elementinden olan bir burcu taşır.
+                                <br />-Akrep burcu erkeği, her bakımdan güvenilir, güçlü, ayakları üzerinde durabilen
+                                bir kişiliğe sahiptir.
+                                <br />-Sürekli hareket halindedir ve yerinde duramaz. İçlerinde bir küçük çocuğun
+                                heyecanını barındırır.
+                                <br />-Yapmak istediği her şeyi gerçekleştirmek için sonuna kadar çabalar ve asla
+                                vazgeçmez.
+                                <br />-Lider ruhludur ve yöneticilik yapmak için doğmuştur. Kimseye minnet etmek
+                                istemez.
+                                <br />-Akrep burcu erkeği dış dünyaya göre ne kadar dışa dönük ve aktif olsa da
+                                aslında iç dünyasında karamsardır.
+                                <br />-Bazı konularda çok ketumdur.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Boğa Burcu Erkeği </b></summary>
+
+                            <span>
+                                -Boğa burcu ateş elementinin grubuna aittir.
+                                <br />-Boğa burcu erkeği, sıcakkanlı ve sakin duruşuyla dikkat çeker.
+                                <br />-Gayret etmeyi sever ve başkalarına yardımcı olma konusunda her zaman ön
+                                planda durur.
+                                <br />-Duygusal yapıdadır ve herkese karşı samimi ve sıcak davranmaya çalışırlar.
+                                <br />-Yaptıkları işlerde kalıcı ve istikrarlı olurlar.
+                                <br />-Boğa burcu erkeği aşırı kıskanç yapıdadır.
+                                <br />-İnatçılığı ve gözü doymayan yapıları onların olumsuz yönleri arasındadır.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Yay Burcu Erkeği </b></summary>
+                            <span>
+                                -Yay burcu ateş elementinin grubuna aittir.
+                                <br />-Yay erkekleri, dünyanın gerçeğini ve bilgeliğini arayan çok enerjik ve
+                                maceracı varlıklardır.
+                                <br />-Jüpiter tarafından yönetildiği için bilgiye, öğrenmeye ve felsefeye
+                                derinden değer verir.
+                                <br />-Diğer insanlarla çevrili olmak, bağlantılar kurmak ve yeni şeyler öğrenmek
+                                ister.
+                                <br />-İyimser ve enerjik, hayatı dolu dolu yaşamak isteyen bir kişidir.
+                                <br />-Deneyimleri paraya veya pahalı bir hediyeye tercih ederler.
+                                <br />-Yay erkeği çok flörtöz ve çekici olsa da, her zaman gerçek niyetlerle
+                                olmaz. Egosunun beslenmesini istediği için sürekli başkalarından ilgi
+                                isteyecektir.
+                            </span><br />
+                        </details>
+                    </h4>
+
+                    <p>
+                        <h3 class="w3-text-teal"><strong>KADINLAR İÇİN YORUMLAR</strong></h3>
+                    </p>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Koç Burcu Kadını </b></summary>
+
+                            <span>
+                                -Koç burcu ateş grubu elementi grubundadır.
+                                <br /> -Koç burcu kadını dik başlı ve oldukça coşkuludur.
+                                <br /> -Tutkulu ve idealist yapısı ile birlikte koç burcu kadını iş güdüleri ile
+                                hareket eder.
+                                <br /> -Koç burcu kadını için aile yapısı ve çocukları da çok önemlidir.
+                                <br /> -Koç burcu kadını kibirli ve umursamaz bir yapıya sahiplerdir.
+                                <br /> -Koç burcu kadını direktiflerinin hemene yerine getirilmesini isterler.
+                                <br /> -Benmerkezci bir yapıya sahip olan koç burcu kadını oldukça kıskanç bir
+                                yapıya sahiplerdir.
+                            </span><br />
+                        </details>
+                    </h4>
+
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Kova Burcu Kadını </b></summary>
+
+                            <span>
+                                -Kova burcu hava grubu elementi burcudur.
+                                <br /> -Kova Burcu kadını, arkadaş canlısı ve duşa dönük bir yapıya sahiptir.
+                                Kova burcu kadınına sahip arkadaşlar kolay kolay sıkılmaz.
+                                <br /> -Oldukça Zeki bir yapıya sahip olan kova burcu lafını ile vakit
+                                geçirmek oldukça keyiflidir.
+                                <br /> - Kova burcu lafını, kimseyi incitmez, herkesi dinler ama sonra yine
+                                kendi doğruları ile karar verir.
+                                <br /> -Uçarı ve isyankar bir kişiliğe sahiptir.
+                                <br /> -Zeki olduğunun farkında olduğu için kimi zaman ukala tavır
+                                sergileyebilir ve bu karşı taraftan farklı şekilde karşılanabilir.
+                                <br /> -Eğlenceye çok düşkün olduğu için ilişkilerinde sıkıntı çekebilir.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Oğlak Burcu Kadını </b></summary>
+
+                            <span>
+                                -Oğlak burcu toprak grubu elementi grubundadır.
+                                <br />-Oğlak burcu kadınları; gelecek kaygısı yaşayan burçlar içerisinde yer
+                                alır. Bu özelliklerinden ötürü, sık bir şekilde kuruntu yaparak depresyona
+                                bile girebilirler.
+                                <br />-Oğlak burcu kadınlarının, pratik olması olumlu özelliklerinden
+                                biridir.
+                                <br />-Para konusunda elini tutan oğlak burcu kadınları; geleneklere
+                                bağlıdır.
+                                <br />-Oğlak burcu kadınları, mesafeli davranır. Oğlak burcunun olumsuz yönü
+                                budur.
+                                <br />-Oğlak burcu kadınları, toprak elementinin verdiği özellikle
+                                duygularını pek belli etmezler.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Balık Burcu Kadını </b></summary>
+
+                            <span>
+                                -Balık burcu su grubu elementi burcundadır.
+                                <br /> -Balık burcu kadını genel anlamda duygusal, maneviyatı ve iç
+                                dünyası kuvvetli, uyumlu ve nazik bir karaktere sahiptir.
+                                <br /> -Enerjik ve de renkli bir karaktere sahip arkadaş canlısı
+                                insanlardır.
+                                <br /> -Merhametli ve aşırı şefkatlidir.
+                                <br /> -Balık burcu kadını bu özellikleri sayesinde iyi bir anne, arkadaş,
+                                dost, sevgili ve eş olabilir.
+                                <br /> - Bu kişiler hayal dünyası içinde yaşamaya başladıklarında hem çok
+                                mutlu olurlar hem de tüm gerçekliklere kendilerini tamamen kapatırlar.
+                                <br /> -Bazı durumlarda duygusal oldukları nedeni ile çok kolay ağlarlar
+                                ve çabuk duramazlar.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>İkizler Burcu Kadını </b> </summary>
+
+                            <span>
+                                -İkizler burcu hava grubu elementi burcudur.
+                                <br /> -Sorunlar karşısında pratik çözümler üretmeyi başarır.
+                                <br /> -Zekasıyla birçok sıkıntıdan, kolayca kurtulabilme becerisine
+                                sahiptir. Meraklı olduğu kadar zekidir.
+                                <br /> -Sosyal hayatında etrafına her zaman neşe saçar.
+                                <br /> -İkizler burcu kadınının olumsuz yönlerinden birisi, tutarsız ve
+                                kararsız kalmasıdır.
+                                <br /> -Ayrıca kurnaz yapıda olduklarından, karşıdakiler tarafından
+                                itici bulunabilirler.
+                                <br /> -Çabuk sıkılan, alaycı karaktere sahiptir.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Yengeç Burcu Kadını </b></summary>
+
+                            <span>
+                                -Yengeç burcu su grubu elementi burcundadır.
+                                <br />-Yengeç burcu kadını oldukça romantik ve kırılgandır.
+                                <br />-Yengeç burcu kadını adeta sakin bir limandır. Sevgi dolu ve
+                                şefkatli bir kalpleri vardır.
+                                <br />-Yengeç burcu kadını duygusal olduğu kadar melankolik bir yapıya
+                                da sahiptir.
+                                <br />-Karmaşık duyguları nedeniyle her an değişik bir ruh haline
+                                bürünebilirler.
+                                <br />-Aynı zamanda kırılmaktan çok korkarlar. Bu nedenle yengeç burcu
+                                kadını gerçekten güvenmediği sürece evlenmez.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Aslan Burcu Kadını </b></summary>
+
+                            <span>
+                                -Aslan burcu ateş elementi grubu burcundandır.
+                                <br /> -Aslan burcu; insanları etkisi altına alırken hiç zorlanmayan
+                                bir burçtur.
+                                <br />-Aslan burcu kadınlarının enerjileri her zaman yüksektir.
+                                Enerjik davranışlarının yanı sıra heyecanlı tavırları ile arkadaş
+                                ortamında her zaman istenen bir karakterdir.
+                                <br /> -Tutkulu, iyimser ve sadık olan aslan burcu kadınları,
+                                karşındakine çok değer verir.
+                                <br /> -Aslan burcu kadınlarının olumsuz yönleri içerisindeki en
+                                önemli özellik, kibirli olmalarıdır.
+                                <br /> -Otoriter ve liderlik özellikleri daha baskın olan bu burcun,
+                                çevredeki kişiler açısından kibirli bulunmaları mümkündür.
+                                <br /> -Liderlik ve yönetici ruhunun, iş yaşamına da yansıtan aslan
+                                burcu kadınları, genel olarak üst mevkilerde olmayı ister.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Başak Burcu Kadını </b></summary>
+
+                            <span>
+                                -Başak burcu toprak grubu elementi burcudur.
+                                <br /> -Başak burcu kadını, zeka ve güzelliğin en etkileyici
+                                kombinasyonu olarak göz alıcıdır.
+                                <br /> -Bulundukları her ortamda hareketleri ve mantıksal
+                                hareketleri ile kolaylıkla göze çarpar ve ilgi çekerler.
+                                <br /> -Organizasyon yetenekleri muazzam olan bu kadınlar icraat
+                                insanı olarak tanımlanabilirler.
+                                <br /> -Fazla detaycı olmaları bazen karşılarındaki kişiyi
+                                bunaltabilir. Aşırı titizdirler.
+                                <br /> -Kıskançlıkta da dozu aştıkları zamanlar az değildir.
+                                <br /> -Çok ketum ve mesafeli davranışları sebebi ile
+                                ilişkilerinde karşılarındaki insanın kendilerinden uzaklaşmasına
+                                ve soğumasına sebep olabilirler.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Terazi Burcu Kadını </b></summary>
+
+                            <span>
+                                -Terazi burcu hava grubu elementi burcudur.
+                                <br />-Her zaman nazik ve gerçekçi olması dikkat çekici bir
+                                özelliğidir.
+                                <br />-Terazi burcu kadınları kararsız insanlar olarak bilinir.
+                                <br />-Adaletli olmaları onların en belirgin özelliğidir.
+                                <br />-Aşık olunca kıskanç olmaktadır.
+                                <br />-Kolayca bağımlılık edinebilir. İradeleri pek güçlü
+                                değildir.
+                                <br />-Disipline verdiği önemle çalıştığı işte hak ve adalet
+                                kavramlarını gözetir. Bu özellikleriyle iyi bir siyasetçi ya
+                                da hukukçu olabilirler.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Akrep Burcu Kadını </b></summary>
+
+                            <span>
+                                -Akrep burcu su grubu elementi burcundadır.
+                                <br />-Akrep burcu kadınının en fazla bilinen özelliği, sezgi
+                                gücünün çok yüksek olmasıdır.
+                                <br />-Kendisini sevmeyenlere karşı merhamet duyması
+                                beklenemez.
+                                <br />-Akrep burcu kadınları, kimseyi yarı yolda bırakmazlar.
+                                <br />-Akrep burcu kadını hatalarını kabul etme tarafında
+                                durmaz. Gizli kalması gerekenleri açığa çıkarmak
+                                isteyebilir. Her olayın altında bir şey olduğunu düşünürler.
+                                <br />-Anın tadını çıkarmayı severler ama geleceğe daha fazla
+                                ilgi duyabilirler.
+                            </span><br />
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Boğa Burcu Kadını </b></summary>
+
+                            <span>
+                                -Boğa burcu toprak grubu elementi burcudur.
+                                <br />-Boğa burcu kadını, annesine karşı aşırı düşkündür.
+                                Hayatını anne ekseni çevresinde çizmeyi sever.
+                                <br />-Sevecekleri adamı didik didik ederler. Her özelliğini
+                                bilmek isterler.
+                                <br />-İstikrarlıdır. Kararını hızlı şekilde verip bunu kısa
+                                sürede uygular.
+                                <br />-Boğa burcu kadını, aşırı seviyede kıskançtır. Kıskanç
+                                olduğu kadar inatlaşmayı sever.
+                                <br />-Kendisi ve ailesi dışında başka kimseyi düşünmediği
+                                söylenebilir.
+                                <br />-Boğa burcu kadını iş hayatında hırslıdır. Tuttuğunu
+                                koparan yapıdadır.
+                            </span>
+                        </details>
+                    </h4>
+                    <h4 class="w3-text-black">
+                        <details>
+                            <summary><b>Yay Burcu Kadını </b></summary>
+
+                            <span>
+                                -Yay burcu ateş elementi grubu burcundandır.
+                                <br />-Yay burcu kadını, becerikli ve yetenekli bir
+                                kişiliğe sahiptir. Bu özelliği sayesinde pek çok işte
+                                başarılı olur.
+                                <br />-Yeni şeyler araştırmak ve keşfetmek onun için bir
+                                tutkudur. Hep bir heyecan arayışı içindedir.
+                                <br />-Yay burcu kadınına aşık olmak kolay ama onu elde
+                                etmek zordur.
+                                <br />-Yay burcu kadını, fazla heyecanlı, dikkatsiz ve
+                                kimi zaman patavatsız olabilir.
+                                <br />-Özgürlükleri kısıtlandığı zaman içsel bakımdan alt
+                                üst olurlar.
+                                <br />-Her şeyden çok çabuk sıkılırlar.
+                            </span><br />
+                        </details>
+                    </h4>
+
+                </form>
+            </div>
+
+
+            <div class="w3-container" id="BurçUyumları"
+                 style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-teal">
+                    <b> BURÇ UYUMU</b>
+                </h1>
+                <div class="ornek">
+
+                    <hr style="width:50px;border:5px solid black"
+                        class="w3-round" />
+                    <form action="">
+                        <span>
+                            <h3>Burç Uyumu Nedir? & Neye Göre Belirlenir?</h3>
+                        </span>
+                        <img src="resim-video/melike.jpeg" width="280px"
+                             height="280px" class="saga-kaydir" />
+                    </form>
+                </div>
+                <span>
+                    Her birimiz farklı zaman ve coğrafyalarda gökyüzündeki
+                    o ana özgü sıra dışı gezegen, Güneş ve Ay dizilimleri
+                    altında doğarız ve başka biriyle karşılaştığımızda ve
+                    bir araya geldiğimizde o kişinin de göksel
+                    dizilimlerimi aramızdaki ilişkinin sırrını ve
+                    tılsımını oluşturur. <br />
+                    Doğum haritalarımızın karşılıklı uyumunu inceleyen
+                    dala astrolojide sinastri adı verilmektedir. En doğru
+                    sinastri analizini yapabilmek için her iki kişinin
+                    doğum haritaları, doğdukları yere ve zamana göre
+                    çıkarılmış olmalıdır. <br />
+                    Karşılıklı doğum haritalarımızı tam olarak bilemesek
+                    de Güneş’lerimizden yola çıkarak sevdiğimizle,
+                    arkadaşlarımızla, aile bireylerimiz ve çocuklarımızla
+                    aramızdaki ilişkinin şifrelerini yakalayabiliriz. <br />
+                    Elementler de burç uyumu konusunda oldukça
+                    belirleyicidir.
+                    Örneğin: Su grupları duygusal iken ateş grup
+                    burçlarının daha baskın olması aralarında sorunlar
+                    çıkabileceğini gösterir.
+                </span><br /><br /><br />
+
+                <span><strong>Kendi Burcunuzu Seçiniz :</strong></span>
+                <select name="" id="burc1">
+                    <option value="bilinmiyor">Bilinmiyor</option>
+                    <option value="koç">Koç</option>
+                    <option value="boğa">Boğa</option>
+                    <option value="ikizler">İkizler</option>
+                    <option value="yengeç">Yengeç</option>
+                    <option value="aslan">Aslan</option>
+                    <option value="başak">Başak</option>
+                    <option value="terazi">Terazi</option>
+                    <option value="akrep">Akrep</option>
+                    <option value="yay">Yay</option>
+                    <option value="oğlak">Oğlak</option>
+                    <option value="kova">Kova</option>
+                    <option value="balık">Balık</option>
+                </select>
+                <br />
+                <hr />
+                <span><strong>Partnerinizin Burcunu Seçiniz :</strong></span>
+                <select name="" id="burc2">
+                    <option value="bilinmiyor">Bilinmiyor</option>
+                    <option value="koç">Koç</option>
+                    <option value="boğa">Boğa</option>
+                    <option value="ikizler">İkizler</option>
+                    <option value="yengeç">Yengeç</option>
+                    <option value="aslan">Aslan</option>
+                    <option value="başak">Başak</option>
+                    <option value="terazi">Terazi</option>
+                    <option value="akrep">Akrep</option>
+                    <option value="yay">Yay</option>
+                    <option value="oğlak">Oğlak</option>
+                    <option value="kova">Kova</option>
+                    <option value="balık">Balık</option>
+                </select>
+                <br /><br />
+                <button onclick="burcUyumu()">TIKLAYINIZ</button>
+                <p id="uyum"></p>
+            </div>
+
+            <!-- Designers -->
+            <div class="w3-container" id="Tasarımcılar" style="margin-top:75px">
+                <h1 class="w3-xxxlarge w3-text-teal"><b>Tasarımcılar</b></h1>
+                <hr style="width:50px;border:5px solid black" class="w3-round" />
+                <br />
+                <span>
+                    Güvenilir araştırmalar sonucu nokta atışı yorumları derledik. Sizler için araştırmalarımızı zamanında
+                    yayınlayıp burçlarınız hakkında eşsiz bilgilere sahip olmanızı kolaylaştıracağız. Keyifli okumalar dileriz.
+                    <br /><br />
+                    <h4>
+                        <strong>
+                            Eğitim Gördüğümüz Okul : <a href="https://www.beykoz.edu.tr/" target="_blank">
+                                Beykoz
+                                Üniversitesi
+                            </a>
+                        </strong>
+                    </h4>
+
+                </span>
+            </div>
+
+            <!-- The Team -->
+            <div class="w3-row-padding w3-grayscale">
+                <div class="w3-col m4 w3-margin-bottom">
+                    <div class="w3-beige">
+                        <img src="resim-video/melike.jpeg" alt="Melike Aydoğduoğlu" style="width:100%" />
+                        <div class="w3-container">
+                            <h3>Melike Aydoğduoğlu</h3>
+                            <p class="w3-opacity">Site Tasarımcısı</p>
+                            <p>
+                                Beykoz Üniversitesi Yazılım Mühendisliği bölümü 1. sınıf öğrencisiyim. <br /> Ekip arkadaşım Özlem ile
+                                birlikte bu sitede, doğduğumuz anda gökyüzü bize ne demek istiyor onları paylaştık. <br />
+                                Umarız beğenirsiniz!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-col m4 w3-margin-bottom">
+                    <div class="w3-beige">
+                        <img src="resim-video/ozlem.jpeg" alt="Özlem Babatutmaz" style="width:100%" />
+                        <div class="w3-container">
+                            <h3>Özlem Babatutmaz</h3>
+                            <p class="w3-opacity">Site Tasarımcısı</p>
+                            <p>
+                                Beykoz Üniversitesi Yazılım Mühendisliği bölümü 1. sınıf öğrencisiyim. Ekip arkadaşım Melike ile
+                                birlikte bu sitede, gezegenlerin doğduğumuz andaki konumlarının hesaplamasını ve kişiliklerimize
+                                etkilerini paylaştık. <br /> Umarız beğenirsiniz!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- İLETİŞİM -->
+                <div class="w3-container" id="İletişim" style="margin-top:75px">
+                    <h1 class="w3-xxxlarge w3-text-teal"><b>İLETİŞİM</b></h1>
+                    <hr style="width:50px;border:5px solid black" class="w3-round" />
+                    <span>
+                        <strong>
+                            <h3>Öneri ve Şikayetleriniz İçin Bizimle İletişim Kurmayı Unutmayın!</h3>
+                        </strong>
+                    </span>
+                    <form action="mailto:melikeaydogduoglu@hotmail.com" method="post" enctype="text/plain">
+                        <div class="w3-section">
+                            <label>İsim-Soyisim</label>
+                            <input class="w3-input w3-border" type="text" name="name" id="name" required=required />
+                        </div>
+                        <div class="w3-section">
+                            <label>Email</label>
+                            <input class="w3-input w3-border" type="text" name="email" id="email" required=required />
+                        </div>
+                        <div class="w3-section">
+                            <label>Mesajınızı Bırakın!</label>
+                            <input class="w3-input w3-border" type="text" name="message" id="message" required=required />
+                        </div> <br />
+                        <button type="submit" class="w3-button w3-block w3-padding-large w3-teal w3-margin-bottom">Gönder</button>
+                    </form>
+
+                </div>
+
+
+                <!-- End page content -->
+            </div>
+
+
+            <!-- W3.CSS Container -->
+            <div class="w3-beige w3-container w3-padding-32" style="margin-top:40px;padding-right:50px"><p class="w3-right">Tesekkurler <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"></a></p></div>
+
+            <script>
+                // Script to open and close sidebar
+                function w3_open() {
+                    document.getElementById("mySidebar").style.display = "block";
+                    document.getElementById("myOverlay").style.display = "block";
+                }
+
+                function w3_close() {
+                    document.getElementById("mySidebar").style.display = "none";
+                    document.getElementById("myOverlay").style.display = "none";
+                }
+
+                // Modal Image Gallery
+                function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                }
+            </script>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
